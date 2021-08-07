@@ -140,3 +140,51 @@ print(a or d)
 0
 ```
 
+## 打印语句
+
+### 取消换行
+
+```python
+# 换行(默认)
+print('xxxx',end='\n')
+# 取消换行
+print('xxxx',end='')
+```
+
+## 循环语句
+
+### 循环配合else使用
+
+````python
+print("***************else使用**************")
+k = 0
+while k < 3:
+    print(k)
+    k += 1
+else:
+    print("这里是while配合else使用1")
+
+print("***************break使用（break会彻底打断循环，跳出循环后不会走else了！！！）**************")
+k = 0
+while k < 3:
+    if k == 2:
+        break
+    print(k)
+    k += 1
+else:
+    print("这里是while配合else使用1")
+````
+
+**结果**
+
+```
+***************else使用**************
+0
+1
+2
+这里是while配合else使用1
+***************break使用（break会彻底打断循环，跳出循环后不会走else了！！！）**************
+0
+1
+```
+
